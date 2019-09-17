@@ -1,8 +1,11 @@
 
 <div class="container workitemclass">
     <ul class="list-group workitem-list">
-        <li class="list-group-item" *ngFor="let item of workItems" (click)="onSelectItem()"><a href="#"> Item name : {{ item }} </a></li>
+        <li class="list-group-item" 
+            *ngFor="let item of workItems; let i = index" 
+            (click)="onSelectItem(item)">
+            <a routerLink="/i"> Item name : {{ item }} </a></li>
     </ul>
 </div>
 
-<app-workitem-details></app-workitem-details>
+<!-- <app-workitem-details></app-workitem-details> -->

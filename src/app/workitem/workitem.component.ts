@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Route } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
 	selector: 'app-workitem',
@@ -10,14 +10,15 @@ export class WorkitemComponent implements OnInit {
 
 	workItems = ['Item1','Item2','Item3','Item4','Item5'];
 	
-	constructor(private ActivatedRouter: ActivatedRoute,
-				private Route: Route) { }
+	constructor(private route: ActivatedRoute,
+				private router: Router) { }
 
 	ngOnInit() {
 	}
 
-	onSelectItem() {
-		
+	onSelectItem(itemName: String) {
+		console.log(itemName);
+		this.router.navigate(['/' + itemName])
 	}
 
 }

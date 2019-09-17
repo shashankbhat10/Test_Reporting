@@ -4,7 +4,7 @@ import { WorkitemComponent } from './workitem/workitem.component';
 import { WorkitemDetailsComponent } from './workitem/workitem-details/workitem-details.component';
 
 const routes: Routes = [
-	{ path: '', redirectTo: '/workitem', pathMatch: 'full' },
+	// { path: '', redirectTo: '', pathMatch: 'full' },
 	{ path: 'workitem', component: WorkitemComponent, children: [
 		{ path: ':id', component: WorkitemDetailsComponent }
 	]}
